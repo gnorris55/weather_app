@@ -8,6 +8,19 @@
 </head>
 <body>
     <h1>the weather app</h1>
+    <h2>look weather up for your location</h2>
+    <form v-on:submit.prevent>
+        <label for="city">City: </label>
+        <input type="text" name="city" id="city">
+        <button type="button" id="weather-button">get weather</button>
+    </form>
+    <div id="weather-report">
+        <div class="weathers" v-for="weather in myWeathers">
+            <h3> {{weather.city}} </h3>
+            <p> {{weather.temp}} </p>
+            <p> {{weather.type}} </p>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
