@@ -1,3 +1,59 @@
 body {
+    font-family: 'Roboto', sans-serif;
     background-color: rgb(219, 219, 219);
+    .contents {
+        border: grey solid .5px;
+        padding: 20px;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        text-align: center;
+        .weather-form {
+            form {
+                @extend .container-stuff;
+                display: grid;
+                grid-template-columns: 10% 35% 25%;
+                text-align: left;
+                .item {
+                    margin-bottom: 10px;
+                }
+                input {
+                    padding-left: 10px;
+                    height: 20px;
+                    width: 144px;
+                    border: none;
+                    font-size: 14px;
+                    border: grey solid .25px;
+                    outline: none;
+                }
+                button {
+                    height: 23px;
+                    border: none;
+                    background-color: white;
+                    border: grey solid .25px;
+                    font-weight: 700;
+                }
+            }
+        }
+        #weathers {
+            @extend .container-stuff;
+            text-align: left;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.container-stuff {
+    background-color: rgb(219, 219, 219);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: grey solid .5px;
+}
+.title {
+    font-size: 18px;
+    text-decoration-line: underline;
 }

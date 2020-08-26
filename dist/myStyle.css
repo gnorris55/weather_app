@@ -1,2 +1,46 @@
 body {
+  font-family: 'Roboto', sans-serif;
   background-color: #dbdbdb; }
+  body .contents {
+    border: grey solid .5px;
+    padding: 20px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    text-align: center; }
+    body .contents .weather-form form {
+      display: grid;
+      grid-template-columns: 10% 35% 25%;
+      text-align: left; }
+      body .contents .weather-form form .item {
+        margin-bottom: 10px; }
+      body .contents .weather-form form input {
+        padding-left: 10px;
+        height: 20px;
+        width: 144px;
+        border: none;
+        font-size: 14px;
+        border: grey solid .25px;
+        outline: none; }
+      body .contents .weather-form form button {
+        height: 23px;
+        border: none;
+        background-color: white;
+        border: grey solid .25px;
+        font-weight: 700; }
+    body .contents #weathers {
+      text-align: left; }
+      body .contents #weathers p {
+        font-size: 15px; }
+
+.container-stuff, body .contents .weather-form form, body .contents #weathers {
+  background-color: #dbdbdb;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  border: grey solid .5px; }
+
+.title {
+  font-size: 18px;
+  text-decoration-line: underline; }

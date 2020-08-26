@@ -8,10 +8,11 @@ function weatherReport(city, temp, type) {
     };
 
 }
-
+weatherController.getWeather("london");
 let b = document.getElementById('weather-button');
 b.onclick = function() {
     weatherController.getWeather(document.getElementById('city').value);
 }
+
 
 export {weatherReport}

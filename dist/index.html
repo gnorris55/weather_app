@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="myStyle.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,18 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>the weather app</h1>
-    <h2>look weather up for your location</h2>
-    <form v-on:submit.prevent>
-        <label for="city">City: </label>
-        <input type="text" name="city" id="city">
-        <button type="button" id="weather-button">get weather</button>
-    </form>
-    <div id="weather-report">
-        <div class="weathers" v-for="weather in myWeathers">
-            <h3> {{weather.city}} </h3>
-            <p> {{weather.temp}} </p>
-            <p> {{weather.type}} </p>
+    
+    <div class="contents">
+        <h1>the weather app</h1>
+        <p class="title">search current weather by city</p>
+        <div class="weather-form">
+            <form class="input"v-on:submit.prevent>
+                <div class="item"><label for="city">City: </label></div>
+                <div class="item"><input type="text" name="city" id="city"></div>
+                <div class="item"><button type="button" id="weather-button">SEARCH</button></div>
+            </form>
+        </div>
+        <div id="weather-report">
+            <p class="title">The current weather in {{myWeather.city}} </p>
+            <div id="weathers">
+                <p>temperature: {{myWeather.temp}}C </p>
+                <p>climate: {{myWeather.type}} </p>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
